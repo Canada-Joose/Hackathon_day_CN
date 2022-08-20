@@ -1,0 +1,57 @@
+{% extends 'base2.html' %}
+
+{% block css %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'personal_detail.css' %}" />
+
+{% endblock css %}
+
+
+{% block content %}
+
+<div class="profile_box">
+    <div class="profile_top">
+        <img src="{{ profile.userimage }}" alt="" height="200px" width="200px">
+        <div>
+            <div class="profile_nickname blueblack">
+                {{ profile.nickname }}
+            </div>
+            <div class="profile_cat">
+                <div>
+                    <img src="{{ profile.catimage }}" alt="" height="75px" width="75px">
+                </div>
+                <div class="profile_catspecies">
+                    {{ profile.catspecies }} 집사
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="profile_mid">
+        <div class="help_status blueblack">돌봄 츄르 현황</div>
+        <div class="chur_place">
+        </div>
+    </div>
+    <div>
+        <p>후기 남기기</p>
+        {% csrf_token %}
+        <form method="POST">
+            <input type="text" placeholder="돌봄 후기를 등록해보세요!" name="review">
+            <button type="submit">등록하기</button>
+        </form>
+        {% for review in reviews %}
+        {{ review.text }}
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+
+{% block script %}
+
+
+{% endblock script %}

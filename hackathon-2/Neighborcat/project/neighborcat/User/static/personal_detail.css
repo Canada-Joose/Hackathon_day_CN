@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.profile_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 750px;
+    height: 850px;
+    background-color: white;
+    border-radius: 2%;
+    margin-top: 60px;
+}
+
+.profile_top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.profile_nickname {
+    font-size: 50px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.profile_cat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.profile_catspecies {
+    margin-left: 15px;
+    color: rgb(142, 165, 235);
+}
+
+.profile_mid {
+    width: 500px;
+    height: 200px;
+}
+
+.help_status {
+    font-size: 25px;
+}
+
+.chur_place {
+    width: 500px;
+    height: 60px;
+    border:rgb(142, 165, 235);
+    border-radius: 3%;
+    margin-top: 2%;
+    background-color: rgb(142, 165, 235);
+}

@@ -1,0 +1,67 @@
+{% extends 'base2.html' %}
+
+{% block css %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'personal.css' %}" />
+
+{% endblock css %}
+
+
+
+{% block content %}
+
+<div class="profile_box2">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <br>
+        <br>
+        <div class="profile_line">
+            <label for="nickname">닉네임&nbsp;</label>
+            <input type="text" name="nickname" id="nickname" placeholder="{{ profile.nickname }}">
+        </div>
+        <br>
+        <div class="profile_line">
+            <label for="pwd">거주지 주소&nbsp;</label>
+            <input type="text" name="address" id="address" placeholder="{{ profile.address }}">
+        </div>
+        <br>
+        <div class="profile_line">
+            <label for="pwd">고양이 종류&nbsp;</label>
+            <input type="text" name="catspecies" id="catspecies" placeholder="{{ profile.catspecies }}">
+        </div>
+        <br>
+        <div class="profile_line">
+            <label for="pwd">반려동물등록번호&nbsp;</label>
+            <input type="text" name="animalnum" id="animalnum" placeholder="{{ profile.catnumber }}">
+        </div>
+        <br>
+        <br>
+        <div class="profile_line">
+            <label for="pwd">프로필 사진&nbsp;</label>
+            <input type="image" name="profileimage" id="profileimage" placeholder="{{ profile.userimage }}">
+        </div>
+        <br>
+        <div class="profile_line">
+            <label for="pwd">냥이 프로필 사진&nbsp;</label>
+            <input type="image" name="catprofileimage" id="catprofileimage" placeholder="{{ profile.catimage }}">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="flex-row justify-center">
+            <button type="submit" class="btn-pastelblue">정보 수정</button>
+        </div>
+
+    </form>
+</div>
+
+
+
+{% endblock content %}
+
+
+{% block script %}
+
+
+{% endblock script %}
